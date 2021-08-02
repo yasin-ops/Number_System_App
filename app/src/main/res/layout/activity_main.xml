@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:background="@drawable/background_design"
+    android:paddingEnd="@dimen/_16sdp"
+    tools:context=".MainActivity"
+    android:layout_weight="10">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:gravity="center_horizontal"
+        android:text="Number Converter"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_24sdp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:contentDescription="App Logo"
+                android:src="@drawable/logo" />
+
+            <EditText
+                android:id="@+id/etvDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:maxLength="20"
+                android:drawablePadding="@dimen/_10sdp"
+                android:background="@drawable/focus_view_design"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:drawableLeft="@drawable/decimal_left_drawable"/>
+
+            <EditText
+                android:id="@+id/etvBinary"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+
+                android:digits="01"
+                android:inputType="number"
+                android:background="@drawable/focus_view_design"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableLeft="@drawable/binary_left_drawable"
+                />
+
+            <EditText
+                android:id="@+id/etvOcta"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/focus_view_design"
+                android:layout_marginBottom="@dimen/_10sdp"
+
+                android:maxLength="20"
+                android:digits="01234567"
+                android:singleLine="true"
+                android:inputType="number"
+                android:drawablePadding="@dimen/_10sdp"
+
+                android:drawableLeft="@drawable/octa_left_drawable"/>
+
+            <EditText
+                android:id="@+id/etvHexa"
+                android:background="@drawable/focus_view_design"
+                style="@style/myEditTextStyle"
+                android:digits="0123456789ABCDEFabcdef"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:maxLength="20"
+
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableLeft="@drawable/hex_left_drawable"/>
+
+            <Button
+                android:id="@+id/clear_text"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Clear"
+                android:background="@drawable/button_design"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
